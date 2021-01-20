@@ -1,0 +1,24 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"useBuiltIns": "usage",
+				"modules": false,
+				"corejs": "3" // 声明corejs版本
+			}
+		]
+	],
+	"plugins": [
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"corejs": false,
+				"helpers": false,
+				"regenerator": false,
+				"useESModules": false
+			}
+		]
+	],
+	"comments": false
+}

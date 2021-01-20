@@ -1,0 +1,39 @@
+{
+  "name": "mycm-utils",
+  "version": "0.1.4",
+  "description": "my collection of common tools ",
+  "main": "dist/mycm-utils.js",
+  "scripts": {
+    "test": " node src/test.js",
+    "build": "webpack --config webpack.config.js "
+  },
+  "keywords": [
+    "utils"
+  ],
+  "files": [
+    "src",
+    "dist/*.js",
+    "types/*.d.ts",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeizt/mycm-utils.git"
+  },
+  "homepage": "https://github.com/afeizt/mycm-utils#readme",
+  "author": "afeizt@163.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.8.2",
+    "regenerator-runtime": "^0.13.7",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  },
+  "dependencies": {}
+}
