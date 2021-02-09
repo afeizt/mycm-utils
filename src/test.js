@@ -12,3 +12,4 @@ let htmlToText = myUtils.htmlToText;
 let cutHtml = myUtils.cutHtml;
 console.log(htmlToText(html))
 console.log(cutHtml(html, 10))
+testcc
