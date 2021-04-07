@@ -3,11 +3,12 @@
     "version": "0.1.5",
     "description": "my collection of common tools ",
     "main": "dist/mycm-utils.js",
-    "module": "dist/mycm-utils.min.js",
+    "module": "dist/mycm-utils.esm.js",
     "scripts": {
         "test": " node src/test.js",
         "dev": "rollup -c -w",
-        "build": "cross-env ENV='production' rollup -c  "
+        "buildumd": "cross-env ENV='production' rollup -c  ",
+        "buildejs": "cross-env ENV='production' rollup --config rollup.ejs.config.js "
     },
     "keywords": [
         "utils"
@@ -19,6 +20,7 @@
         "*.d.ts",
         "README.md"
     ],
+
     "repository": {
         "type": "git",
         "url": "git+https://github.com/afeizt/mycm-utils.git"
