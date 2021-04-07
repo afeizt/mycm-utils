@@ -1,38 +1,43 @@
 {
-  "name": "mycm-utils",
-  "version": "0.1.5",
-  "description": "my collection of common tools ",
-  "main": "dist/mycm-utils.js",
-  "scripts": {
-    "test": " node src/test.js",
-    "dev": "rollup -c -w",
-    "build": "cross-env ENV='production' rollup -c  "
-  },
-  "keywords": [
-    "utils"
-  ],
-  "files": [
-    "src",
-    "dist/*.js",
-    "types/*.d.ts",
-    "README.md"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/afeizt/mycm-utils.git"
-  },
-  "homepage": "https://github.com/afeizt/mycm-utils#readme",
-  "author": "afeizt@163.com",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-transform-runtime": "^7.12.15",
-    "@babel/preset-env": "^7.12.11",
-    "cross-env": "^7.0.3",
-    "rollup": "^2.38.5",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-serve": "^1.1.0",
-    "rollup-plugin-uglify": "^6.0.4"
-  },
-  "dependencies": {}
+    "name": "mycm-utils",
+    "version": "0.1.5",
+    "description": "my collection of common tools ",
+    "main": "dist/mycm-utils.js",
+    "module": "dist/mycm-utils.min.js",
+    "scripts": {
+        "test": " node src/test.js",
+        "dev": "rollup -c -w",
+        "build": "cross-env ENV='production' rollup -c  "
+    },
+    "keywords": [
+        "utils"
+    ],
+    "files": [
+        "src",
+        "dist/*.js",
+        "types/*.d.ts",
+        "*.d.ts",
+        "README.md"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/afeizt/mycm-utils.git"
+    },
+    "homepage": "https://github.com/afeizt/mycm-utils#readme",
+    "author": "afeizt@163.com",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-transform-runtime": "^7.12.15",
+        "@babel/preset-env": "^7.12.11",
+        "cross-env": "^7.0.3",
+        "rollup": "^2.38.5",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-dts": "^3.0.1",
+        "rollup-plugin-serve": "^1.1.0",
+        "rollup-plugin-uglify": "^6.0.4"
+    },
+    "dependencies": {
+        "core-js": "^3.8.3"
+    }
 }

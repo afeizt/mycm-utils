@@ -1,6 +1,7 @@
 // const myUtils = require('mycm-utils')
 const myUtils = require('../dist/mycm-utils')
 
+
 let time = new Date().getTime();
 let format = myUtils.dateFormat;
 let cutStr = myUtils.cutStr;

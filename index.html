@@ -6,10 +6,13 @@
         <script src="./dist/mycm-utils.js"></script>
     </head>
     <body>
+        <p class="sample-resource">
+            <span>\r\n《牛津高阶英汉\r\n双解词典》</span>
+        </p>
         <script>
 		console.log(mycmUtils)
-	let str="dasdadadsasd";
-	console.log(mycmUtils.cutStr(str,3))
+	let str=`<p class="sample-resource">  <span>\r\n《牛津高阶英汉\r\n双解词典》</span>  </p>`;
+	    document.getElementsByTagName('body')[0].append(mycmUtils.htmlToText(str,true));
         </script>
     </body>
 </html>
