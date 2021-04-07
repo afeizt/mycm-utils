@@ -1,5 +1,5 @@
-// const myUtils = require('mycm-utils')
-const myUtils = require('../dist/mycm-utils')
+const myUtils = require('mycm-utils')
+    // const myUtils = require('../dist/mycm-utils')
 
 
 let time = new Date().getTime();
