@@ -9,6 +9,7 @@ export default {
         name: 'mycmUtils',
         file: './dist/mycm-utils.esm.js',
         format: "es",
+        browser: true,
         sourcemap: process.env.ENV == 'production' ? true : false,
 
     },

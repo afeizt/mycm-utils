@@ -4,6 +4,7 @@
     "description": "my collection of common tools ",
     "main": "dist/mycm-utils.js",
     "module": "dist/mycm-utils.esm.js",
+    "browser": "dist/mycm-utils.umd.js",
     "scripts": {
         "test": " node src/test.js",
         "dev": "rollup -c -w",
@@ -20,6 +21,7 @@
         "*.d.ts",
         "README.md"
     ],
+    "types": "./dist/index.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/afeizt/mycm-utils.git"
@@ -28,16 +30,16 @@
     "author": "afeizt@163.com",
     "license": "MIT",
     "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@babel/plugin-transform-runtime": "^7.12.15",
-        "@babel/preset-env": "^7.12.11",
+        "@babel/core": "^7.13.14",
+        "@babel/plugin-transform-runtime": "^7.13.10",
+        "@babel/preset-env": "^7.13.12",
         "cross-env": "^7.0.3",
-        "rollup": "^2.38.5",
+        "rollup": "^2.44.0",
         "rollup-plugin-babel": "^4.4.0",
         "rollup-plugin-serve": "^1.1.0",
         "rollup-plugin-uglify": "^6.0.4"
     },
     "dependencies": {
-        "core-js": "^3.8.3"
+        "core-js": "^3.10.1"
     }
 }

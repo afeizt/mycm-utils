@@ -9,6 +9,7 @@ export default {
         name: 'mycmUtils',
         file: './dist/mycm-utils.js',
         format: "umd",
+        browser: true,
         sourcemap: process.env.ENV == 'production' ? true : false,
 
     },
