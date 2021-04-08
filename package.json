@@ -1,6 +1,6 @@
 {
     "name": "mycm-utils",
-    "version": "0.1.5",
+    "version": "0.2.0",
     "description": "my collection of common tools ",
     "main": "dist/mycm-utils.js",
     "module": "dist/mycm-utils.esm.js",
