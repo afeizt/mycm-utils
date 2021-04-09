@@ -1,14 +1,14 @@
 import 'core-js/modules/es.date.to-string.js';
-import 'core-js/modules/es.regexp.constructor.js';
-import 'core-js/modules/es.regexp.exec.js';
-import 'core-js/modules/es.regexp.to-string.js';
 import 'core-js/modules/es.string.replace.js';
-import 'core-js/modules/es.array.includes.js';
-import 'core-js/modules/es.array.slice.js';
+import 'core-js/modules/es.regexp.exec.js';
+import 'core-js/modules/es.regexp.constructor.js';
+import 'core-js/modules/es.regexp.to-string.js';
+import 'core-js/modules/es.string.split.js';
+import 'core-js/modules/es.string.search.js';
 import 'core-js/modules/es.object.to-string.js';
 import 'core-js/modules/es.string.match.js';
-import 'core-js/modules/es.string.search.js';
-import 'core-js/modules/es.string.split.js';
+import 'core-js/modules/es.array.slice.js';
+import 'core-js/modules/es.array.includes.js';
 
 function dateFormat(timestamp, format) {
   var time = new Date(timestamp);
@@ -35,9 +35,7 @@ function dateFormat(timestamp, format) {
   return format;
 }
 
-function cutStr(str, num) {
-  var suffix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '...';
-
+function cutStr(str, num, suffix) {
   if (str.replace(/[\u4e00-\u9fa5]/g, '**').length <= num) {
     return str;
   }
@@ -59,7 +57,7 @@ function cutStr(str, num) {
     }
   }
 
-  return tmpStr + suffix;
+  return tmpStr + (suffix || '');
 }
 
 function htmlToText(oHtml) {
@@ -67,11 +65,8 @@ function htmlToText(oHtml) {
 
   if (typeof oHtml === "string") {
     var str = oHtml;
-    debugger;
     if (wrap === false) str.replace(/[\r\n]/g, "");else {
-      console.log(/\r\n/.test(str));
       str.replace(/\r\n/, "444");
-      console.log(str);
     }
     return str;
   } else {
@@ -79,7 +74,7 @@ function htmlToText(oHtml) {
   }
 }
 
-var cutHtml = function cutHtml(oHtml, length, isByte) {
+var cutHtml = function cutHtml(oHtml, length, isByte, suffix) {
   var rgx1 = /<[^<^>^\/]+>/;
   var rgx2 = /<\/[^<^>^\/]+>/;
   var rgx4 = /<[^<^>]+>/;
@@ -161,15 +156,8 @@ var cutHtml = function cutHtml(oHtml, length, isByte) {
     }
   }
 
-  return tStr;
+  return tStr + (suffix || '');
 };
 
-var index = {
-  dateFormat: dateFormat,
-  cutStr: cutStr,
-  htmlToText: htmlToText,
-  cutHtml: cutHtml
-};
-
-export default index;
+export { cutHtml, cutStr, dateFormat, htmlToText };
 //# sourceMappingURL=mycm-utils.esm.js.map

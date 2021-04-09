@@ -7,20 +7,20 @@
  */
 export default function htmlToText(oHtml, wrap = false) {
 
-	if (typeof oHtml === "string") {
-		let str = oHtml
-		// .replace(/(^\s*)|(\s*$)/g, "")
-		// .replace(/<[^<^>]*>/g, "");
-		debugger;
-		if (wrap === false) str.replace(/[\r\n]/g, "");
-		else {
-			console.log(/\r\n/.test(str));
-			str.replace(/\r\n/, "444");
-			console.log(str)
-		}
-		return str;
+    if (typeof oHtml === "string") {
+        let str = oHtml
+            // .replace(/(^\s*)|(\s*$)/g, "")
+            // .replace(/<[^<^>]*>/g, "");
 
-	} else {
-		return "";
-	}
+        if (wrap === false) str.replace(/[\r\n]/g, "");
+        else {
+            // console.log(/\r\n/.test(str));
+            str.replace(/\r\n/, "444");
+            // console.log(str)
+        }
+        return str;
+
+    } else {
+        return "";
+    }
 };

@@ -7,7 +7,7 @@
 npm install -S mycm-utils
 const mycmUtils = require('mycm-utils');
 or 
-import mycmUtils from "mycm-utils";
+import * as mycmUtils from "mycm-utils";
 
 console.log(utils.cutHtml(str))
 
