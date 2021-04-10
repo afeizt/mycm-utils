@@ -1,6 +1,8 @@
 import serve from 'rollup-plugin-serve';
 import babel from 'rollup-plugin-babel';
 import { uglify } from 'rollup-plugin-uglify';
+import copy from 'rollup-plugin-copy';
+
 console.log(process.env.ENV)
 export default {
     input: './src/index.js',
@@ -14,8 +16,14 @@ export default {
 
     },
     plugins: [
+
         babel({
             exclude: "node_modules/**"
+        }),
+        copy({
+            targets: [
+                { src: 'src/index.d.ts', dest: 'dist' }
+            ]
         }),
         // process.env.ENV == 'production' ? uglify() : null,
         // process.env.ENV == 'production' ? null : serve({

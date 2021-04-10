@@ -1,18 +1,21 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <script src="./dist/mycm-utils.js"></script>
-    </head>
-    <body>
-        <p class="sample-resource">
-            <span>\r\n《牛津高阶英汉\r\n双解词典》</span>
-        </p>
-        <script>
-		console.log(mycmUtils)
-	let str=`<p class="sample-resource">  <span>\r\n《牛津高阶英汉\r\n双解词典》</span>  </p>`;
-	    document.getElementsByTagName('body')[0].append(mycmUtils.htmlToText(str,true));
-        </script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./dist/mycm-utils.js"></script>
+</head>
+
+<body>
+    <p class="sample-resource">
+        <span>\r\n《牛津高阶英汉\r\n双解词典》</span>
+    </p>
+    <script>
+        console.log(mycmUtils)
+        let str = `<p class="sample-resource">  <span>\r\n《牛津高阶英汉\r\n双解词典》</span>  </p>`;
+        document.getElementsByTagName('body')[0].append(mycmUtils.htmlToText(str, true));
+    </script>
+</body>
+
 </html>

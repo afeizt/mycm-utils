@@ -1,6 +1,6 @@
 {
     "name": "mycm-utils",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "my collection of common tools ",
     "main": "dist/mycm-utils.js",
     "module": "dist/mycm-utils.esm.js",
@@ -12,7 +12,7 @@
         "buildejs": "cross-env ENV='production' rollup --config rollup.ejs.config.js "
     },
     "keywords": [
-        "utils"
+        "utils,typescript,cuthtml,cutstring,dateformat"
     ],
     "files": [
         "src",
@@ -21,7 +21,7 @@
         "*.d.ts",
         "README.md"
     ],
-    "types": "./dist/index.d.ts",
+    "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/afeizt/mycm-utils.git"
@@ -36,6 +36,7 @@
         "cross-env": "^7.0.3",
         "rollup": "^2.44.0",
         "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-copy": "^3.4.0",
         "rollup-plugin-serve": "^1.1.0",
         "rollup-plugin-uglify": "^6.0.4"
     },
