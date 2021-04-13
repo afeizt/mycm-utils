@@ -21,4 +21,4 @@ var utils=mycmUtils;
 
 console.log(utils.cutHtml(str))
 ```
-https://github.com/afeizt/mycm-utils
+ readme https://github.com/afeizt/mycm-utils
